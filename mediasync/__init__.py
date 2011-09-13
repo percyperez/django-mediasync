@@ -145,6 +145,9 @@ def sync(client=None, force=False, verbose=True):
     #
 
     for dirname in os.listdir(client.media_root):
+        # Ignore root directories in IGNORE_ROOT_DIRS
+        if dirname in msettings['IGNORE_ROOT_DIRS']:
+            continue
 
         dirpath = os.path.abspath(os.path.join(client.media_root, dirname))
 

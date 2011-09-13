@@ -16,6 +16,7 @@ _settings = {
     'PROCESSORS': (slim.css_minifier, slim.js_minifier),
     'SERVE_REMOTE': not settings.DEBUG,
     'URL_PROCESSOR': lambda x: x,
+    'IGNORE_ROOT_DIRS': [],
 }
 
 class Settings(object):
